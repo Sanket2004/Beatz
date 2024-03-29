@@ -7,7 +7,7 @@ function HomePage() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('https://saavn.dev/modules?language=hindi,english')
+        fetch('https://saavn.dev/api/search/artists?query=Arijit+Singh')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
